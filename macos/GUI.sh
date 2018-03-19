@@ -26,8 +26,8 @@ launchctl unload -w \
 /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Change the wallaper
-defaults write com.apple.desktop Background '{default = {ImageFilePath =
-"../wallpapers/totoro.jpeg"; };}'
+# defaults write com.apple.desktop Background '{default = {ImageFilePath =
+# "../wallpapers/totoro.jpeg"; };}'
 
 # ========================================================================== GUI
 
