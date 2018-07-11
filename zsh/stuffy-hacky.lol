@@ -2,8 +2,8 @@
 find ~/Library/Logs/DiagnosticReports -mindepth 1 -delete &>/dev/null #2>&1 &
 
 #H A C I
-defaults write -g InitialKeyRepeat -int 1 2> /dev/null
-defaults write -g KeyRepeat -int 1 2> /dev/null
+defaults write -g InitialKeyRepeat -int 1 2> /dev/null #Don't set this int to 0
+defaults write -g KeyRepeat -int 1 2> /dev/null #Don't set this int to 0
 
 #Drink water reminder script
 sh Water-Reminder/drinkwater.sh
