@@ -2,7 +2,7 @@
 find ~/Library/Logs/DiagnosticReports -mindepth 1 -delete &>/dev/null #2>&1 &
 
 #H A C I
-defaults write -g InitialKeyRepeat -int 10 2> /dev/null
+defaults write -g InitialKeyRepeat -int 1 2> /dev/null
 defaults write -g KeyRepeat -int 1 2> /dev/null
 
 #Drink water reminder script
@@ -28,5 +28,4 @@ export PATH="$PATH:$GOPATH/bin"
 alias atom="open -a Atom.app"
 
 # Change the wallaper
-# defaults write com.apple.desktop Background '{default = {ImageFilePath =
-# "../Misc/Wallpapers/blkhole.jpeg"; };}'
+# defaults write com.apple.desktop Background '{default = {ImageFilePath = "/nfs/2017/z/ztisnes/Desktop/Misc/Wallpapers/gargantua.jpg"; };}'
