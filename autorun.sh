@@ -81,25 +81,25 @@ echo ""
 echo "Don’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
-echo ""
-echo "Installing Homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-echo ""
-echo "Installing node..."
-brew install node
-
-echo ""
-echo "Installing n node version manager"
-npm i -g n
-
-echo ""
-echo "Installing autojump"
-brew install autojump
-
-echo ""
-echo "Installing zsh"
-brew install zsh
+# echo ""
+# echo "Installing Homebrew..."
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#
+# echo ""
+# echo "Installing node..."
+# brew install node
+#
+# echo ""
+# echo "Installing n node version manager"
+# npm i -g n
+#
+# echo ""
+# echo "Installing autojump"
+# brew install autojump
+#
+# echo ""
+# echo "Installing zsh"
+# brew install zsh
 
 echo ""
 echo "Create new npm global directory and set it as prefix"
