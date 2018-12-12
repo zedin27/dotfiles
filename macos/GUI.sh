@@ -1,4 +1,4 @@
-SX preferences                                                              #
+# SX preferences                                                              #
 # ---------------------------------------------------------------------------- #
 
 echo " ->    User Interface"
@@ -25,9 +25,5 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 launchctl unload -w \
 /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
-# Change the wallaper
-# defaults write com.apple.desktop Background '{default = {ImageFilePath =
-# "../wallpapers/totoro.jpeg"; };}'
-
+echo " ->    Done!"
 # ========================================================================== GUI
-
