@@ -12,6 +12,7 @@ sh Water-Reminder/drinkwater.sh
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 
 #aliasing because is fun
+alias venv="virtualenv -p /usr/local/bin/python3 .venv"
 alias atom="open -a Atom.app"
 alias root="cd"
 alias gcc="gcc -Wextra -Wall -Werror"

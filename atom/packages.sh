@@ -5,7 +5,7 @@
 # By the way, when you are getting your packages that you want to install and
 # you have the @ and bunch of numbers, attempt using ReGex make your life easier
 
-list= ( "busy-signal" \
+list= ("busy-signal" \
 "file-icons" \
 "header-42" \
 "intentions" \

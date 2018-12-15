@@ -39,14 +39,6 @@ echo "Disable press-and-hold for keys in favor of key repeat."
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 echo ""
-echo "Save screenshots to the desktop"
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
-
-echo ""
-echo "Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)"
-defaults write com.apple.screencapture type -string "png"
-
-echo ""
 echo "Finder: disable window animations and Get Info animations"
 defaults write com.apple.finder DisableAllAnimations -bool true
 
@@ -58,10 +50,6 @@ echo ""
 echo "Use list view in all Finder windows by default"
 defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
 #echo "Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`"
-
-echo ""
-echo "Power Chime"
-defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
 
 echo ""
 echo "Enable highlight hover effect for the grid view of a stack (Dock)"
@@ -82,12 +70,39 @@ echo "Don’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
 echo ""
-echo "Installing Homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Install homebrew if it is not installed
+# which brew 1>&/dev/null
+# if [ ! "$?" -eq 0 ] ; then
+# 	echo "Homebrew not installed. Attempting to install Homebrew"
+# 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# 	if [ ! "$?" -eq 0 ] ; then
+# 		echo "Something went wrong. Exiting..." && exit 1
+# 	fi
+# fi
+if [ ! "$?" -eq 0 ] ; then
+	echo "Installing Homebrew..."
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+echo ""
+echo "Latest version and upgrade"
+brew update && brew upgrade
 
 echo ""
 echo "Installing node..."
 brew install node
+
+echo ""
+echo "Installing Golang"
+brew install go
+
+echo ""
+echo "Installing python3"
+brew install python3
+
+echo ""
+echo "Installing docker"
+brew install docker
 
 echo ""
 echo "Installing n node version manager"
@@ -98,8 +113,13 @@ echo "Installing autojump"
 brew install autojump
 
 echo ""
-echo "Installing zsh"
+echo "Installing zsh and setting zsh as your main shell"
 brew install zsh
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
+echo ""
+echo "Cleaning outdated versions from the cellar"
+brew cleanup
 
 echo ""
 echo "Installing Water-Reminder"
