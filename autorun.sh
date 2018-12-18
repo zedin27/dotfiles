@@ -70,15 +70,6 @@ echo "Don’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
 echo ""
-# Install homebrew if it is not installed
-# which brew 1>&/dev/null
-# if [ ! "$?" -eq 0 ] ; then
-# 	echo "Homebrew not installed. Attempting to install Homebrew"
-# 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# 	if [ ! "$?" -eq 0 ] ; then
-# 		echo "Something went wrong. Exiting..." && exit 1
-# 	fi
-# fi
 if [ ! "$?" -eq 0 ] ; then
 	echo "Installing Homebrew..."
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

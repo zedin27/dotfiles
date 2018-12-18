@@ -3,7 +3,7 @@
 
 echo " Making my own Mac OS comfort :)"
 
-SCREENSHOT_FOLDER=~/Desktop/Screenshots
+SCREENSHOT_FOLDER=/Users/ztisnes/Desktop/Screenshots
 
 mkdir -p $SCREENSHOT_FOLDER
 
@@ -43,4 +43,5 @@ launchctl unload -w \
 /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 echo "Done :D"
+killall SystemUIServer
 # ========================================================================== GUI
