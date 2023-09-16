@@ -13,12 +13,10 @@ export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 
 #aliasing because is fun
 alias venv="virtualenv -p /usr/local/bin/python3 .venv"
-alias atom="open -a Atom.app"
+alias vs="open -a Visual\ Studio\ Code.app"
 alias root="cd"
 alias gcc="gcc -Wextra -Wall -Werror"
 alias project="cd Desktop/42_Projects/"
-alias submodule="git submodule add https://github.com/zedin27/42_libft libft"
-alias update="git submodule update --rebase --remote"
 
 #Homebrew stuff
 mkdir -p /tmp/.$(whoami)-brew-locks
@@ -30,7 +28,11 @@ export GOPATH=~/go
 export PATH="$PATH:$GOPATH/bin"
 
 #Python stuff
-export PATH=/usr/local/share/python:$PATH
+# export PATH=/usr/local/share/python:$PATH
 
 #export PATH=/Users/ztisnes/.npm-global/lib/node_modules/typescript/bin
 while true; do bash drinkwater.sh && sleep 900; done
+
+#UNUSED
+# alias submodule="git submodule add https://github.com/zedin27/42_libft libft"
+# alias update="git submodule update --rebase --remote"
