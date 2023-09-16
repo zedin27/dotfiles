@@ -31,3 +31,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 #Python stuff
 export PATH=/usr/local/share/python:$PATH
+
+#export PATH=/Users/ztisnes/.npm-global/lib/node_modules/typescript/bin
+while true; do bash drinkwater.sh && sleep 900; done
