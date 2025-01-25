@@ -31,7 +31,7 @@ export PATH="$PATH:$GOPATH/bin"
 # export PATH=/usr/local/share/python:$PATH
 
 #export PATH=/Users/ztisnes/.npm-global/lib/node_modules/typescript/bin
-while true; do bash drinkwater.sh && sleep 900; done
+# while true; do bash drinkwater.sh && sleep 900; done
 
 #UNUSED
 # alias submodule="git submodule add https://github.com/zedin27/42_libft libft"
